@@ -18,6 +18,7 @@ InputsContainer.propTypes = {
   getTipPercent: PropTypes.func.isRequired,
   getBill: PropTypes.func.isRequired,
   getNumberOfPeople: PropTypes.func.isRequired,
+  
 }
 
 export default InputsContainer

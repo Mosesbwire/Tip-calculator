@@ -1,7 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const DisplayContainer = ({getTipPerPerson, getTotalBillPerPerson, reset}) => {
+const DisplayContainer = ({bill, tipPercent,numOfPeople, reset}) => {
+
+  const getTipPerPerson = ()=>{
+    let tip = ((tipPercent/100)*bill)/numOfPeople
+    if(!isFinite(tip)) return 0
+    return Math.round(tip)
+  }
+
+  const getTotalBillPerPerson = ()=>{
+    let splitBill = bill/numOfPeople
+    if(!isFinite(splitBill)){
+      return Math.round(getTipPerPerson() + bill)
+    }
+    return Math.round(getTipPerPerson() + splitBill)
+  }
   return (
     <div className='display-container'>
         <div>
@@ -21,8 +35,9 @@ const DisplayContainer = ({getTipPerPerson, getTotalBillPerPerson, reset}) => {
 }
 
 DisplayContainer.propTypes = {
-  getTipPerPerson: PropTypes.func.isRequired,
-  getTotalBillPerPerson: PropTypes.func.isRequired,
+  bill: PropTypes.number,
+  numOfPeople: PropTypes.number,
+  tipPercent: PropTypes.number,
 }
 
 export default DisplayContainer
