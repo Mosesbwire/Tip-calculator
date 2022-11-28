@@ -19,6 +19,10 @@ input {
   width: 96%;
 }
 
+input:focus {
+  outline: none;
+}
+
 .btn {
   border: none;
   background-color: var(--strong-cyan);
@@ -28,6 +32,7 @@ input {
   padding-block: .75em;
   color: var(--dark-cyan);
   font-weight: 600;
+  cursor: pointer;
 }
 
 .label {

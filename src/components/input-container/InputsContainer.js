@@ -1,17 +1,23 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import BillInput from './BillInput'
+import PeopleInput from './PeopleInput'
 import TipContainer from './TipContainer'
-import Input from './Input'
-import icondollar from '../../images/icon-dollar.svg'
-import iconperson from '../../images/icon-person.svg'
 
-const InputsContainer = () => {
+const InputsContainer = ({getTipPercent, getBill, getNumberOfPeople}) => {
   return (
     <div className='input-container'>
-      <Input label={'Bill'} image={icondollar}/>
-      <TipContainer/>
-      <Input label={'Number of People'} image={iconperson}/>
+      <BillInput getBill={getBill}/>
+      <TipContainer getTipPercent= {getTipPercent}/>
+      <PeopleInput getNumberOfPeople={getNumberOfPeople}/>
     </div>
   )
+}
+
+InputsContainer.propTypes = {
+  getTipPercent: PropTypes.func.isRequired,
+  getBill: PropTypes.func.isRequired,
+  getNumberOfPeople: PropTypes.func.isRequired,
 }
 
 export default InputsContainer
