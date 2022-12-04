@@ -6,13 +6,14 @@ const Calculator = (props) => {
   const [bill, setBill]= useState(0)
   const [numOfPeople, setNumOfPeople] = useState(1)
   const [tipPercent, setTipPercent] = useState(0)
-
-  
+ 
   const getBill = (amount)=>{
+    if(amount.length === 0) { amount = 0}
     setBill(parseInt(amount))
   }
 
   const getNumberOfPeople = (numOfGuest)=>{
+    if(numOfGuest.length === 0){ numOfGuest = 0 }
     setNumOfPeople(parseInt(numOfGuest))
   }
 

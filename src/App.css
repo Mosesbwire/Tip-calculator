@@ -27,6 +27,29 @@ input:focus {
   
 }
 
+label {
+  display: block;
+  margin-bottom: .75em;
+  color: var(--dark-grayish-cyan);
+}
+
+.error {
+  border: 2px solid red;
+  
+}
+
+.error-text {
+  color: red; 
+  
+}
+
+
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+  
+}
 
 
 .btn {
@@ -47,13 +70,9 @@ input:focus {
 
 .label {
   color: var(--dark-grayish-cyan);
+  margin-bottom: .75em;
 }
 
-.form-group > label {
-  display: block;
-  margin-bottom: .75em;
-  color: var(--dark-grayish-cyan);
-} 
 
 .input-group {
   position: relative;

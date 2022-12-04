@@ -5,6 +5,7 @@ import PeopleInput from './PeopleInput'
 import TipContainer from './TipContainer'
 
 const InputsContainer = ({getTipPercent, getBill, getNumberOfPeople, bill, numOfPeople}) => {
+  
   return (
     <div className='input-container'>
       <BillInput getBill={getBill} bill={bill}/>
@@ -20,7 +21,7 @@ InputsContainer.propTypes = {
   getNumberOfPeople: PropTypes.func.isRequired,
   bill: PropTypes.number,
   numOfPeople: PropTypes.number,
-  
+
 }
 
 export default InputsContainer
