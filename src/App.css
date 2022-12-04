@@ -11,7 +11,7 @@
 input {
   background-color:lightgray;
   border-radius: 3px;
-  border: none;
+  border: 2px solid transparent;
   color: var(--dark-cyan);
   padding-block: .75em;
   padding-inline: .5em;
@@ -21,6 +21,8 @@ input {
 
 input:focus {
   outline: none;
+  border: 2px solid var(--strong-cyan);
+  
 }
 
 
@@ -35,6 +37,10 @@ input:focus {
   color: var(--dark-cyan);
   font-weight: 600;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--light-grayish-cyan);
 }
 
 .label {
@@ -95,6 +101,10 @@ input:focus {
   background-color: var(--dark-cyan);
   text-align: center;
   cursor: pointer;
+}
+
+.tip-percent:hover {
+  background-color: var(--strong-cyan);
 }
 
 
