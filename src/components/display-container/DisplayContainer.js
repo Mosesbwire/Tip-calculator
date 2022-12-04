@@ -23,11 +23,11 @@ const DisplayContainer = ({bill, tipPercent,numOfPeople, reset}) => {
         <div>
             <div  className='amount-display'>
                 <p className='heading-text'><span className='heading'>Tip Amount</span><br/> /person</p>
-                <p className='amount'>{getTipPerPerson()}</p>
+                <p className='amount'>Ksh.{getTipPerPerson()}</p>
             </div>
             <div className='amount-display'>
                 <p className='heading-text'><span className='heading'>Total</span> <br/>/person</p>
-                <p className='amount'>{getTotalBillPerPerson()}</p>
+                <p className='amount'>Ksh.{getTotalBillPerPerson()}</p>
             </div>
         </div>
         <button className='btn' onClick={reset}>reset</button>

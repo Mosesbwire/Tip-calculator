@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 :root{
   --strong-cyan: hsl(172,67%,45%);
   --dark-cyan: hsl(183,100%,15%);
@@ -13,10 +14,11 @@ input {
   border-radius: 3px;
   border: 2px solid transparent;
   color: var(--dark-cyan);
-  padding-block: .75em;
+  padding-block: .25em;
   padding-inline: .5em;
   text-align: right;
-  width: 96%;
+  width: 92%;
+  font-size: 24px;
 }
 
 input:focus {
@@ -50,6 +52,7 @@ input:focus {
 .form-group > label {
   display: block;
   margin-bottom: .75em;
+  color: var(--dark-grayish-cyan);
 } 
 
 .input-group {
@@ -60,22 +63,22 @@ input:focus {
 .input-icon {
   position: absolute;
   left: 3%;
-  top: 10px;
+  top: 15px;
 }
 .main {
-  background-color:   hsl(185, 41%, 84%);
-  height: 100vh;
   display: grid;
   justify-items: center;
-  align-items: center;
+  padding-block: 2em;
+  background-color:   hsl(185, 41%, 84%);
+  height: 100vh;  
+  font-family: 'Space Mono', monospace;
 }
 
 .calculator {
-  width: 60%;
-  border-radius: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   padding: 2em;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
   background-color: var(--white);
   column-gap: 2em;
 
@@ -90,9 +93,18 @@ input:focus {
 
 .tip-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1em;
-  margin-block: 2em;
+  margin-block-end: 2em;
+}
+
+.tip-title {
+  margin-top: 2em;
+  color: var(--dark-grayish-cyan);
+}
+
+.custom {
+  width: 78%;
 }
 
 .tip-percent{
@@ -101,6 +113,12 @@ input:focus {
   background-color: var(--dark-cyan);
   text-align: center;
   cursor: pointer;
+  
+}
+
+.tip-percent > p {
+  padding-block: .5em;
+  margin: 0;
 }
 
 .tip-percent:hover {
@@ -147,6 +165,24 @@ input:focus {
   color: var(--strong-cyan);
   font-size: 1.8em;
   font-weight: 700;
+}
+
+@media (min-width: 1000px){
+  .main {
+    justify-items: center;
+    align-items: center;
+  }
+
+  .calculator {
+    width: 60%;
+    grid-template-columns: 1fr 1fr ;
+    border-radius: 10px;
+
+  }
+
+  .tip-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 
