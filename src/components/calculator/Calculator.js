@@ -6,8 +6,8 @@ const Calculator = (props) => {
   const [bill, setBill]= useState(0)
   const [numOfPeople, setNumOfPeople] = useState(1)
   const [tipPercent, setTipPercent] = useState(0)
+
   
- 
   const getBill = (amount)=>{
     setBill(parseInt(amount))
   }
@@ -24,12 +24,13 @@ const Calculator = (props) => {
     setBill(0)
     setNumOfPeople(1)
     setTipPercent(0)
+    
   }
 
 
   return (
     <div className='calculator'>
-        <InputsContainer getTipPercent={getTipPercent} getBill={getBill} getNumberOfPeople={getNumberOfPeople}/>
+        <InputsContainer getTipPercent={getTipPercent} getBill={getBill} getNumberOfPeople={getNumberOfPeople} bill={bill} numOfPeople={numOfPeople}/>
         <DisplayContainer bill={bill} numOfPeople={numOfPeople} tipPercent={tipPercent} reset={reset}/>
     </div>
   )

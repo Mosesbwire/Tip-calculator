@@ -10,7 +10,9 @@ const DisplayContainer = ({bill, tipPercent,numOfPeople, reset}) => {
   }
 
   const getTotalBillPerPerson = ()=>{
+    if (!isFinite(bill)) return 0
     let splitBill = bill/numOfPeople
+
     if(!isFinite(splitBill)){
       return Math.round(getTipPerPerson() + bill)
     }
